@@ -92,8 +92,8 @@ dialog{border:1px solid var(--hot);border-radius:20px;background:var(--bg2);colo
 dialog::backdrop{background:rgba(0,0,0,.65)}
 dialog[open]{animation:pop .3s cubic-bezier(.2,.9,.3,1.2)}
 @keyframes pop{from{transform:scale(.9);opacity:0}}
-dialog h3{font-size:54px}.st{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
-.st div{background:var(--card);border-radius:12px;padding:12px;text-align:center}.st .num{font-size:38px;color:var(--hot);display:block}
+dialog h3{font-size:54px}.st{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.st div{background:var(--card);border-radius:12px;padding:12px 4px;font-size:14px;text-align:center}.st .num{font-size:38px;color:var(--hot);display:block}
 .x{float:right;background:none;border:1px solid var(--line);border-radius:50%;width:38px;height:38px}
 .coach{display:grid;grid-template-columns:240px 1fr;gap:5vw;align-items:center}
 .ph{aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,var(--hot),var(--line));display:grid;place-items:center;font:900 90px "Big Shoulders Display",Impact,sans-serif;color:#0b0b0c}
@@ -181,7 +181,7 @@ footer a{display:block;text-decoration:none;padding:4px 0;transition:color .2s,t
 
 <section id="kit">
   <h2>Our jersey</h2>
-  <div class="jr"><svg viewBox="0 0 300 300" role="img" aria-label="Club jersey"><path id="body" stroke="#d9bf72" stroke-width="2" d="M95 20 L55 38 L10 95 L45 125 L68 100 L68 280 L232 280 L232 100 L255 125 L290 95 L245 38 L205 20 Q150 55 95 20Z" fill="#111111"/><path id="trim" d="M95 20 Q150 55 205 20 L195 14 Q150 40 105 14Z" fill="#d9bf72"/><rect id="band" x="68" y="150" width="164" height="26" fill="#d9bf72" opacity=".95"/><text x="150" y="168" text-anchor="middle" font-family="Impact,sans-serif" font-size="18" fill="#0b0b0c">YOUR SPONSOR</text><circle cx="108" cy="72" r="12" fill="#d9bf72"/></svg>
+  <div class="jr"><svg viewBox="0 0 300 300" role="img" aria-label="Club jersey"><path id="body" stroke="#d9bf72" stroke-width="2" d="M95 20 L55 38 L10 95 L45 125 L68 100 L68 280 L232 280 L232 100 L255 125 L290 95 L245 38 L205 20 Q150 55 95 20Z" fill="#111111"/><path id="trim" d="M95 20 Q150 55 205 20 L195 14 Q150 40 105 14Z" fill="#d9bf72"/><rect id="band" x="68" y="150" width="164" height="26" fill="#d9bf72" opacity=".95"/><text x="150" y="168" text-anchor="middle" font-family="Impact,sans-serif" font-size="18" fill="#0b0b0c">REAPER HOCKEY</text><circle cx="108" cy="72" r="12" fill="#d9bf72"/></svg>
   <div><div class="subs" id="kits"></div><h3 id="kn" style="font-size:48px;margin:20px 0 8px">Home kit</h3><p class="mute" id="kd" style="max-width:44ch"></p><p style="margin-top:14px;max-width:44ch">We have two kits and wear a different one each match. The fixtures show which one is next.</p></div></div>
 </section>
 
@@ -194,8 +194,8 @@ footer a{display:block;text-decoration:none;padding:4px 0;transition:color .2s,t
 
 <section id="sponsors">
   <h2>Sponsors</h2>
-  <p class="mute" style="margin-bottom:16px">Main partner</p><div class="sp m"><div>Your Main Sponsor</div></div>
-  <p class="mute" style="margin-bottom:16px">Official partners</p><div class="sp"><div>Partner One</div><div>Partner Two</div><div>Partner Three</div><div>Partner Four</div></div>
+  <p class="mute" style="margin-bottom:16px">Main partner</p><div class="sp m"><div>Reaper Hockey</div></div>
+  <p class="mute" style="margin-bottom:16px">Also supported by</p><div class="sp" style="max-width:420px"><div>Mr Damien</div></div>
 </section>
 
 <section class="alt" id="contact">
@@ -211,7 +211,7 @@ footer a{display:block;text-decoration:none;padding:4px 0;transition:color .2s,t
 <script>
 const $=id=>document.getElementById(id);
 // ---- EDIT THESE: club content ----
-const P=[[7,"Kavi","Position TBC","15","xx","",0,0,""],[8,"Rithish","Position TBC","15","xx","",0,0,""],[3,"Aarnav","Position TBC","15","xx","",0,0,""],[33,"Abhi","Position TBC","15","xx","",0,0,""],[13,"Suthish","Coach","~20","xx","",0,0,""],[18,"Benito","Position TBC","15","xx","",0,0,""],[4,"Farhan","Position TBC","15","xx","",0,0,""],[30,"Karan","Position TBC","15","xx","",0,0,""],[10,"Rishab","Position TBC","15","xx","",0,0,""],[17,"Antolin","Position TBC","12","xx","",0,0,""],[6,"Niranjan","Position TBC","TBC","xx","",0,0,""]];
+const P=[[7,"Kavi","Position TBC","15",0,0,0],[8,"Rithish","Position TBC","15",0,0,0],[3,"Aarnav","Position TBC","15",0,0,0],[33,"Abhi","Position TBC","15",0,0,0],[13,"Suthish","Coach","~20",0,0,0],[18,"Benito","Position TBC","15",0,0,0],[4,"Farhan","Position TBC","15",0,0,0],[30,"Karan","Position TBC","15",0,0,0],[10,"Rishab","Position TBC","15",0,0,0],[17,"Antolin","Position TBC","12",0,0,0],[6,"Niranjan","Position TBC","TBC",0,0,0]];
 const V="Sport Village Jurong Town football field",FX=[["28 Nov","Opponent TBC (match 1)",V,"Time TBC","next","Jersey TBC"],["28 Nov","Opponent TBC (match 2)",V,"Time TBC","","Jersey TBC"],["28 Nov","Opponent TBC (match 3)",V,"Time TBC","","Jersey TBC"]];
 
 const KITS=[["Home kit","Black with gold trim.",["#111111","#d9bf72"]],["Away kit","Crisp white with gold trim.",["#f4efe3","#d9bf72"]]];
@@ -221,9 +221,9 @@ const tk="PRIME 7 FUTSAL CUP   ★   28 Nov, 1:00 to 3:00 pm   ★   Sport Villa
 $("fx").innerHTML=FX.map(f=>`<div class="${f[4]=="next"?"nx":""}"><span class="mute">${f[0]}</span><span><b>For Real v ${f[1]}</b><br><small class="mute">${f[2]} · ${f[5]}</small></span><span class="res ${f[4]=="W"?"W":""}">${f[3]}</span></div>`).join("");
 
 const byN=n=>P.find(p=>p[0]==n);
-function show(n){const p=byN(n);$("dc").innerHTML=`<h3>${p[1]}</h3><p class="mute">#${p[0]} · ${p[2]} · Plays in Singapore</p><div class="st"><div><span class="num">${p[6]}</span>Matches</div><div><span class="num">${p[7]}</span>Goals</div><div><span class="num">${p[3]}</span>Age</div></div><p class="mute">Height: ${p[4]}</p>`;dg.showModal()}
+function show(n){const p=byN(n);$("dc").innerHTML=`<h3>${p[1]}</h3><p class="mute">#${p[0]} · Plays in Singapore</p><p style="margin-top:10px"><b>Position:</b> ${p[2]}</p><div class="st"><div><span class="num">${p[3]}</span>Age</div><div><span class="num">${p[4]}</span>Goals</div><div><span class="num">${p[5]}</span>Assists</div><div><span class="num">${p[6]}</span>Tackles</div></div>`;dg.showModal()}
 $("bench").innerHTML=P.map(p=>`<button class="chip" data-n="${p[0]}">${p[0]} ${p[1]}</button>`).join("");
-function grid(f){$("pg").innerHTML=P.filter(p=>f=="All"||p[2]==f).map(p=>`<button class="pl" data-n="${p[0]}"><div class="big">${p[0]}</div><h3>${p[1]}</h3><span>${p[2]}</span></button>`).join("");
+function grid(f){$("pg").innerHTML=P.filter(p=>f=="All"||p[2]==f).map(p=>`<button class="pl" data-n="${p[0]}"><div class="big">${p[0]}</div><h3>${p[1]}</h3><span>${p[2]}</span><span>Goals ${p[4]} · Assists ${p[5]} · Tackles ${p[6]}</span></button>`).join("");
 document.querySelectorAll("#flt .chip").forEach(c=>c.classList.toggle("on",c.dataset.f==f))}
 grid("All");
 document.addEventListener("click",e=>{const n=e.target.closest("[data-n]"),f=e.target.closest("[data-f]");if(n)show(n.dataset.n);if(f)grid(f.dataset.f);const k=e.target.closest("[data-k]");if(k)kit(+k.dataset.k);const g=e.target.closest("[data-g]");if(g){const x=GAL[g.dataset.g];$("dc").innerHTML=`<div style="aspect-ratio:4/3;border-radius:14px;background:linear-gradient(135deg,${x[1]});margin-top:44px"></div><h3 style="font-size:38px;margin-top:16px">${x[0]}</h3>`;dg.showModal()}});
